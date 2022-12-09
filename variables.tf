@@ -8,6 +8,12 @@ variable "create_namespace" {
   default     = true
 }
 
+variable "install_crds" {
+  type        = bool
+  description = "(Optional) Install CRDs?"
+  default     = true
+}
+
 variable "chart_version" {
   type        = string
   description = "HELM Chart Version for cert-manager"

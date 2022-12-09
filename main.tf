@@ -20,7 +20,7 @@ resource "helm_release" "cert_manager" {
 
   set {
     name  = "installCRDs"
-    value = "true"
+    value = var.install_crds ? "true" : "false"
   }
 
   dynamic "set" {
